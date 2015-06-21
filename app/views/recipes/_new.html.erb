@@ -1,6 +1,6 @@
 <div class="row">
   <div class="large-12 columns">
-    <%= simple_form_for @recipe, html: { multipart: true } do |f| %>
+    <%= simple_form_for Recipe.new, html: { multipart: true } do |f| %>
       <%= f.input :title, label: 'Recipe Name' %>
       <%= f.input :description, label: 'Measurements' %>
       <%= f.input :text, label: 'Instructions', as: :text %>
@@ -10,6 +10,4 @@
     <% end %>
   </div>
 </div>
-
-<a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
 

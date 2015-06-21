@@ -12,7 +12,10 @@
 <% end %>
 
 <div class="row">
-  <%= link_to 'Add recipe', new_recipe_path, :class => "button radius"%>
+  <%= link_to 'Add recipe', new_recipe_path, :class => "button radius", 'data-reveal-id' => 'newRecipe'%>
 </div>
 
+<div id="newRecipe" class="reveal-modal" data-reveal>
+  <%= render 'recipes/new' %>
+</div>
 
