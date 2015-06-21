@@ -3,7 +3,21 @@
   <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
   <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
 <% else %>
-  <li><%= link_to "Join us", :class => 'navbar-link'  %></li>
-  <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link' %></li>
+  <li>
+    <a href="#" data-reveal-id="signin-modal">Sign In</a>
+    <div id="signin-modal" class="reveal-modal" data-reveal>
+      <%= render "/login_forms/signin" %>
+      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+    </li>
+    <li>
+      <a href="#" data-reveal-id="signup-modal">Sign Up</a>        
+      <div id="signup-modal" class="reveal-modal" data-reveal>
+        <%= render "/login_forms/signup" %>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+  </li>
 <% end %>
+
+
 
