@@ -1,14 +1,18 @@
-<h1>Recipes</h1>
+<h1>MetaRecipes</h1>
 
-  <ul class="large-block-grid-3">
-  <% @recipes.each do |recipe| %>
-      <%= image_tag recipe.image.url, :size => "200x200" %>
+<% @recipes.each_slice(3) do |slice| %>
+  <div class="row" data-equalizer>
+  <% slice.each do |recipe| %>
+    <div class="medium-4 columns panel recipe-card" data-equalizer-watch>
+      <%= link_to image_tag(recipe.image), recipe_path(recipe) %>
+      <%= link_to recipe.title, recipe_path(recipe), :class => "recipe-card-title" %>
+    </div>
+    <% end %>
+  </div>
+<% end %>
 
-  <% end %>
-  </ul>
-
-
-<div>
-<%= link_to 'Add recipe', new_recipe_path, :class => "button radius"%>
+<div class="row">
+  <%= link_to 'Add recipe', new_recipe_path, :class => "button radius"%>
 </div>
+
 

@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+@import "foundation_and_overrides";
+ 
+.recipe-card {
+  text-align: center;
+  img{
+    max-width: 150px;
+    max-height: 200px;  
+  }
+}
+
+.recipe-card-title {
+  display: block;
+  padding: 1em;
+}
+
+.page-title {
+  padding: .7em 0;
+  text-align: center;
+}
+
+
