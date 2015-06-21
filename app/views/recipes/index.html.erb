@@ -1,0 +1,14 @@
+<h1>Recipes</h1>
+
+  <ul class="large-block-grid-3">
+  <% @recipes.each do |recipe| %>
+      <%= image_tag recipe.image.url, :size => "200x200" %>
+
+  <% end %>
+  </ul>
+
+
+<div>
+<%= link_to 'Add recipe', new_recipe_path, :class => "button radius"%>
+</div>
+
