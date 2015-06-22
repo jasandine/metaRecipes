@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery.raty
+//= require ratyrate
 //= require foundation
 //= require_tree .
 $(function() {
