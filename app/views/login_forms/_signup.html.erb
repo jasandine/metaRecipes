@@ -1,16 +1,18 @@
 <div id="signup">
-<h2>Sign Up</h2>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-<%= devise_error_messages! %>
-<%= f.label :email %>
-<%= f.email_field :email, :autofocus => true %>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %>
+  <div class="authform">
+    <h2>Sign Up</h2>
+    <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    <%= f.label :email %>
+    <%= f.email_field :email, :autofocus => true %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
 
-<%= f.submit "Sign up", :class => 'button' %>
-<% end %>
-<a href='#' data-reveal-id="signin-modal">Sign Up</a>
+    <%= f.submit "Sign up", :class => 'button' %>
+    <% end %>
+    <a href='#' data-reveal-id="signup-modal">Sign Up</a>
+  </div>
 </div>
-<div>
+
