@@ -19,7 +19,7 @@
   text-align: center;
   img{
     max-width: 150px;
-    max-height: 200px;  
+    max-height: 200px;
   }
 }
 
@@ -29,8 +29,13 @@
 }
 
 .page-title {
-  padding: .7em 0;
+  padding: .3em 0;
   text-align: center;
+}
+
+.page-rating {
+  text-align: center;
+  margin-top: -.5em;
 }
 
 #signin-modal {
@@ -48,3 +53,4 @@ footer {
         color: #fff;
     }
 }
+
