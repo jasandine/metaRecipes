@@ -5,7 +5,9 @@
     <title><%= content_for?(:title) ? yield(:title) : "Meta Recipes" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Meta Recipes" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
     <%# Modernizr is required for Zurb Foundation %>
+
     <%= javascript_include_tag 'vendor/modernizr' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -16,8 +18,9 @@
     </header>
     <main role="main">
        <%= render 'layouts/messages' %>
-       
+
        <%= yield %>
     </main>
+       <%= render 'layouts/footer' %>
   </body>
 </html>

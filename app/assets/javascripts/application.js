@@ -17,8 +17,8 @@
 //= require_tree .
 $(function() {
   $(document).foundation();
-
 });
+
 
 $("#modal").html('<%= escape_javascript(render "modal" ') 
 $('#modal').foundation('reveal', 'open');
