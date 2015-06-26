@@ -2,8 +2,8 @@
   <div class="large-12 columns">
     <%= simple_form_for Recipe.new, html: { multipart: true } do |f| %>
       <%= f.input :title, label: 'Recipe Name' %>
-      <%= f.input :description, label: 'Measurements' %>
-      <%= f.input :text, label: 'Instructions', as: :text %>
+      <%= f.input :description, label: 'Ingredients' %>
+      <%= f.input :instructions, label: 'Instructions' %>
       <%= f.input :image, label: false %>
 
       <%= f.button :submit %>
